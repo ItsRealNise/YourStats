@@ -2,7 +2,7 @@ name: YourStats
 main: ItsRealNise\YourStats\Main
 api: 4.0.0
 author: ItsRealNise
-version: 1.0
+version: 1.0.0
 
 commands:
   ystats:
