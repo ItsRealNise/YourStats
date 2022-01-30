@@ -5,4 +5,5 @@ branches:
 projects:
   YourStats:
     path: ""
+    icon: icon.png
 ...
