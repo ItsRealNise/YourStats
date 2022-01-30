@@ -18,9 +18,13 @@ use pocketmine\event\block\{BlockPlaceEvent, BlockBreakEvent};
 use pocketmine\event\entity\{EntityDamageByEntityEvent, EntityDamageEvent};
 use pocketmine\event\player\{PlayerJumpEvent, PlayerDeathEvent};
 
+use onebone\economyapi\EconomyAPI;
 use jojoe77777\FormAPI\SimpleForm;
 
 class Main extends PluginBase implements Listener {
+    
+    /** @var EconomyAPI $eco */
+    public $eco;
     
     /** @var Config $config */
     public $config;
@@ -69,6 +73,11 @@ $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->deathAll = $this->death->getAll();
         $this->kill = new Config($this->getDataFolder() . "kill.yml", Config::YAML);
         $this->killAll = $this->kill->getAll();
+        $this->eco = $this->getServer()->getPluginManager()->getPlugin("EconomyAPI");
+        if($this->eco == null) {
+            $this->getServer()->getPluginManager()->disablePlugins();
+            $this->getServer()->getLogger()->alert("EconomyAPI not found");
+        }
         $this->getScheduler()->scheduleRepeatingTask(new ClosureTask(
             function (): void {
                 $this->break->setAll($this->breakAll);
@@ -249,11 +258,7 @@ $this->getServer()->getPluginManager()->registerEvents($this, $this);
              }
         });
         $name = $sender->getName();
-        $eco = $this->getServer()->getPluginManager()->getPlugin("EconomyAPI");
-        if($eco == null) {
-            $this->getServer()->getPluginManager()->disablePlugins();
-            $this->getServer()->getLogger()->alert("EconomyAPI not found");
-        }
+        $eco = $this->eco->myMoney($sender);
         $place = $this->getPlace($sender);
         $break = $this->getBreak($sender);
         $jump = $this->getJump($sender);
