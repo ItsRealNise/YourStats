@@ -1,0 +1,15 @@
+name: YourStats
+main: ItsRealNise\YourStats\Main
+api: 4.0.0
+author: ItsRealNise
+version: 1.0
+
+commands:
+  ystats:
+    description: "Show your own stats"
+    permission: yourstats.cmd
+
+permissions:
+  yourstats.cmd:
+    description: Open Your Stats UI
+    default: true

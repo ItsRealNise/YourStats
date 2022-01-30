@@ -1,0 +1,18 @@
+use-ingame: "§cUsage ingame"
+
+ui-title: "§aProfile"
+
+#{name} is player name
+#{first_played} is player first join the server
+#{ping} is player ping
+#{money} is player money
+#{x} is player X position
+#{y} is player Y position
+#{z} is player Z position
+#{world} is player in world name
+#{place} is player place the block
+#{break} is player break the block
+#{kill} is player kill another player
+#{death} is player death by another player
+#{jump} is total jump of player
+stats: "Hi, §a{name} §f This is your stats in server\n\nName: §a{name}\n§fPing: §a{ping}§fms\n§fFirst Played: §a{first_played}\n§fMoney: §a{money}\n§fPosition: §a{x},{y},{z}\n§fWorld: §a{world}\n§fTotal Place: §a{place}\n§fTotal Break: §a{break}\n§fK/D: §a{kill}§7/§a{death}\n§fJump: §a{jump}"
