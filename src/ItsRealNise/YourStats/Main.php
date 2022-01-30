@@ -5,6 +5,7 @@ namespace ItsRealNise\YourStats;
 use pocketmine\Server;
 use pocketmine\player\Player;
 use pocketmine\event\Listener;
+use pocketmine\plugin\Plugin;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
