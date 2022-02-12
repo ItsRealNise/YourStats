@@ -19,7 +19,7 @@ use pocketmine\event\entity\{EntityDamageByEntityEvent, EntityDamageEvent};
 use pocketmine\event\player\{PlayerJumpEvent, PlayerDeathEvent};
 
 use onebone\economyapi\EconomyAPI;
-use jojoe77777\FormAPI\SimpleForm;
+use ItsRealNise\YourStats\libs\jojoe77777\FormAPI\SimpleForm;
 
 class Main extends PluginBase implements Listener {
     
