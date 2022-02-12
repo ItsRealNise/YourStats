@@ -1,6 +1,6 @@
 <?php
 
-namespace jojoe77777\FormAPI;
+namespace ItsRealNise\YourStats\libs\jojoe77777\FormAPI;
 
 class CustomForm extends Form {
 
